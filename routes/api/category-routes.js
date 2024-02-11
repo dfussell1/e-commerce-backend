@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
       if(!category) {
         res.status(400).json({ message: 'No category with that ID!'});
         return;
-      }
+      };
 
       res.status(200).json(category);
     } catch (err) {
@@ -57,7 +57,7 @@ router.put('/:id', async (req, res) => {
     if (!updateCategory) {
       res.status(400).json({ message: 'No category with that ID!'});
       return;
-    }
+    };
 
     res.status(200).json(updateCategory)
   } catch (err) {
@@ -76,7 +76,7 @@ router.delete('/:id', async (req, res) => {
       if (!deleteCategory) {
         res.status(400).json({ message: 'No category with that ID!'});
         return;
-      }
+      };
   
       res.status(200).json(deleteCategory);
     } catch (err) {
